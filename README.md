@@ -13,6 +13,11 @@
 *install live-server to run a local server*
 `$ npm install -g live-server`
 
+*If you have a npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules : 1)Give admin permissions to your computer user. 2) run this command:
+`$ sudo chown -R $USER /usr/local/lib/node_modules` 
+
+*Enter your password and be happy.
+
 *launch the App*
 `$ live-server`
 
