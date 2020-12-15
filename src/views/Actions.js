@@ -6,4 +6,5 @@ export default (billUrl) => {
       ${eyeBlueIcon}
       </div>
     </div>`;
-};
+}; //Bug here because the brackets where not properly closed (previous ')})
+
