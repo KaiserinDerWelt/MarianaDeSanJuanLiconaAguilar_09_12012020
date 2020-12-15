@@ -71,7 +71,7 @@ describe("Given that I am a user on login page", () => {
       writable: true
     })
 
-    // we have to mock navigation to test it
+    // have to mock navigation to test it
     const onNavigate = (pathname) => {
       document.body.innerHTML = ROUTES({ pathname })
     }
@@ -99,7 +99,7 @@ describe("Given that I am a user on login page", () => {
           type: "Employee",
           email: inputData.email,
           password: inputData.password,
-          status: "connected"
+          status: "connected" //It authenticates as employee!
         })
       )
     })  
