@@ -27,7 +27,7 @@
 
 **How to run all tests with Jest:**
 
-`$ npm run test`
+`$ jest --coverage --noStackTrace --silent`
 
 **How to run a single test:**
 
