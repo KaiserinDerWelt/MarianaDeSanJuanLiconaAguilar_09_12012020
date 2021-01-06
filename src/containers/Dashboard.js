@@ -2,7 +2,7 @@ import { formatDate } from "../app/format.js";
 import DashboardFormUI from "../views/DashboardFormUI.js";
 import BigBilledIcon from "../assets/svg/big_billed.js";
 import { ROUTES_PATH } from "../constants/routes.js";
-import USERS_TEST from "../constants/usersTest.js";
+import USERS_TEST from "../constants/usersTest.js"; //Added semicolons
 import Logout from "./Logout.js";
 
 export const filteredBills = (data, status) => {
@@ -26,7 +26,7 @@ export const filteredBills = (data, status) => {
 		  })
 		: [];
 };
-
+//Added semicolons
 export const card = (bill) => {
 	const firstAndLastNames = bill.email.split("@")[0];
 	const firstName = firstAndLastNames.includes(".")
@@ -54,7 +54,7 @@ export const card = (bill) => {
       </div>
     </div>
   `;
-};
+}; //Semicolons
 
 export const cards = (bills) => {
 	return bills && bills.length
@@ -64,7 +64,7 @@ export const cards = (bills) => {
 
 export const getStatus = (index) => {
 	switch (index) {
-		case 1:
+		case 1: //Semicolons
 			return "pending";
 		case 2:
 			return "accepted";
@@ -77,7 +77,7 @@ export default class {
 	constructor({ document, onNavigate, firestore, bills, localStorage }) {
 		this.document = document;
 		this.onNavigate = onNavigate;
-		this.firestore = firestore;
+		this.firestore = firestore; //Semicolons
 		$("#arrow-icon1").click((e) => this.handleShowTickets(e, bills, 1));
 		$("#arrow-icon2").click((e) => this.handleShowTickets(e, bills, 2));
 		$("#arrow-icon3").click((e) => this.handleShowTickets(e, bills, 3));
@@ -94,7 +94,7 @@ export default class {
 				`<div style='text-align: center;'><img width=${imgWidth} src=${billUrl} /></div>`
 			);
 		if (typeof $("#modaleFileAdmin1").modal === "function")
-			$("#modaleFileAdmin1").modal("show");
+			$("#modaleFileAdmin1").modal("show"); //Semicolons
 	};
 
 	handleEditTicket(e, bill, bills) {
@@ -173,7 +173,7 @@ export default class {
 		if (this.firestore) {
 			return this.firestore
 				.bills()
-				.orderBy("date", "asc")
+				.orderBy("date", "asc") //order by date
 				.get()
 				.then((snapshot) => {
 					const bills = snapshot.docs.map((doc) => ({
@@ -186,7 +186,7 @@ export default class {
 				})
 				.catch(console.log);
 		}
-	};
+	}; // Closed function
 
 	// no need to cover this function by tests
 	updateBill = (bill) => {

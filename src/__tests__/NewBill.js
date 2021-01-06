@@ -10,6 +10,7 @@ describe("Given I am connected as an employee", () => {
 			document.body.innerHTML = html;
 			//to-do write assertion
 		});
+		//Test for newbill
 		it("NewBill constructor works", () => {
 			const obj = new NewBill({
 				document: document,
@@ -26,7 +27,7 @@ describe("Given I am connected as an employee", () => {
 				document,
 				onNavigate,
 				firestore: null,
-				localStorage: window.localStorage,
+				localStorage: window.localStorage, //Uses local storage 
 			});
 
 			const handleSubmit = jest.fn(obj.handleSubmit);

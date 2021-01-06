@@ -2,9 +2,10 @@ import { screen } from "@testing-library/dom";
 import BillsUI from "../views/BillsUI.js";
 import Bills from "../containers/Bills.js";
 import { bills } from "../fixtures/bills.js";
-import userEvent from "@testing-library/user-event";
-import { ROUTES } from "../constants/routes";
-import Actions from "../views/Actions";
+import userEvent from "@testing-library/user-event";//
+import { ROUTES } from "../constants/routes";//
+import Actions from "../views/Actions";//
+//Imported Routes
 
 describe("Given I am connected as an employee", () => {
 	describe("When I am on Bills Page", () => {
@@ -13,8 +14,10 @@ describe("Given I am connected as an employee", () => {
 			document.body.innerHTML = html;
 			//to-do write expect expression
 		});
+
+		// Created the test for bills
 		test("Then bills should be ordered from earliest to latest", () => {
-			const html = BillsUI({ data: bills });
+			const html = BillsUI({ data: bills }); //Earlies2Latest
 			document.body.innerHTML = html;
 			const dates = screen
 				.getAllByText(
@@ -33,7 +36,7 @@ describe("Given I am connected as an employee", () => {
 			});
 			expect(obj.document).toBe(document);
 		});
-		test("New bill button", () => {
+		test("New bill button", () => { //Testing new bill button
 			const html = BillsUI(bills);
 			document.body.innerHTML = html;
 			const onNavigate = (pathname) => {
@@ -54,7 +57,7 @@ describe("Given I am connected as an employee", () => {
 			expect(handleClickNewBill).toHaveBeenCalled();
 		});
 
-		test("Eye button", () => {
+		test("Eye button", () => { //Testing eye button to display file
 			const html = Actions(bills[0].fileUrl);
 			document.body.innerHTML = html;
 			const onNavigate = (pathname) => {

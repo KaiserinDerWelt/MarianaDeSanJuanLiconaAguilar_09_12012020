@@ -30,7 +30,7 @@ export default class {
 	handleClickNewBill = () => {
 		this.onNavigate(ROUTES_PATH["NewBill"]);
 	};
-
+//Show image in eye icon
 	handleClickIconEye = (icon) => {
 		console.log(icon.currentTarget);
 		const billUrl = icon.currentTarget.getAttribute("data-bill-url");

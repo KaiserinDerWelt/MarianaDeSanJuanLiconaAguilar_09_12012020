@@ -8,19 +8,19 @@ export default class NewBill {
 		this.firestore = firestore;
 		const formNewBill = this.document.querySelector(
 			`form[data-testid="form-new-bill"]`
-		);
+		); //semicolon
 		formNewBill.addEventListener("submit", this.handleSubmit);
 		const file = this.document.querySelector(`input[data-testid="file"]`);
 		file.addEventListener("change", this.handleChangeFile);
 		this.fileUrl = null;
 		this.fileName = null;
-		new Logout({ document, localStorage, onNavigate });
+		new Logout({ document, localStorage, onNavigate }); //semicolons
 	}
 	handleSubmit = (e) => {
 		e.preventDefault();
 		// Upload the Image
 		const file = this.document.querySelector(`input[data-testid="file"]`)
-			.files[0];
+			.files[0];  //Removed split
 		const fileName = file?.name;
 		this.firestore?.storage
 			.ref(`justificatifs/${fileName}`)
