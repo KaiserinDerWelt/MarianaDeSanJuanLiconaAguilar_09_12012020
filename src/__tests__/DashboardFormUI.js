@@ -20,17 +20,17 @@ const bill = {
 
 const billAccepted = {
   ...bill,
-  "status": "accepted"
+  "status": "aceptada"
 }
 
 const billPending = {
   ...bill,
-  "status": "pending"
+  "status": "pendiente"
 }
 
 const billrefused = {
   ...bill,
-  "status": "refused"
+  "status": "rechazada"
 }
 
 describe('Given I am connected as an Admin and I am on Dashboard Page', () => {

@@ -56,19 +56,19 @@ export default ({ data: bills, loading, error }) => {
       ${VerticalLayout(120)}
       <div class='content'>
         <div class='content-header'>
-          <div class='content-title'> My fees </div>
-          <button type="button" data-testid='btn-new-bill' class="btn btn-primary">New fee</button>
+          <div class='content-title'> Mis documentos y facturas</div>
+          <button type="button" data-testid='btn-new-bill' class="btn btn-primary">Nuevo documento o factura</button>
         </div>
         <div id="data-table">
         <table id="example" class="table table-striped" style="width:100%">
           <thead>
               <tr>
-                <th>Category</th>
-                <th>Label</th>
-                <th>Date</th>
-                <th>Amount</th>
-                <th>Status</th>
-                <th>Actions</th>
+                <th>Categoria</th>
+                <th>Etiqueta</th>
+                <th>Fecha</th>
+                <th>Cantidad</th>
+                <th>Estado</th>
+                <th>Acciones</th>
               </tr>
           </thead>
           <tbody data-testid="tbody">

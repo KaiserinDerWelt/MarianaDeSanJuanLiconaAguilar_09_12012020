@@ -6,7 +6,7 @@ export default () => {
     <div class='layout'>
       ${VerticalLayout()}
       <div class='content' id='loading'>
-        Loading...
+        Cargando...
       </div>
     </div>`
   )
